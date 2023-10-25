@@ -51,7 +51,7 @@ img{
         <p>{{ item['fields']['ParteHospedaje'] }} {{ item['fields']['ParteTransporte'] }}</p>
         <p><strong>Costo: </p></strong><p><span style="font-weight:bold;color:red;font-size:3.2em;">${{ item['fields']['Precio'] }}<span></p>
         
-     <a v-if="item['fields']['whappepe']" :href="item['fields']['whappepe'][0]['url']">
+     <a v-if="item['fields']['whappepe']" :href="item['fields']['whappepe']">
                 <span>Más info</span>
             </a>
        </li>
