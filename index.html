@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<html>
+<head>
+  <title>José Barajas: RP Conecta Saltillo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <h1>Disponibilidad</h1>
+    <h2>RP José Barajas</h2>
+    <ul>
+     <li v-for="item in items">
+        <img :src="item['fields']['Imagen'][0]['thumbnails']['large']['url']" alt="" class="imagen" v-if="item['fields']['Imagen']" width="150" height="300">
+        
+        <h3>{{ item['fields']['Festival'] }} {{ item['fields']['PartePaquete'] }} {{ item['fields']['Nombre'] }}</h3>
+        <p>{{ item['fields']['ParteHospedaje'] }} {{ item['fields']['ParteTransporte'] }}</p>
+        <p><strong>Costo: </p></strong><p><span style="font-weight:bold;color:red;font-size:3.2em;">${{ item['fields']['Precio'] }}<span></p>
+        
+      <a v-if="item['fields']['whappepe']" href="formatUrl(item['fields']['whappepe']['url'])">
+                <span>Más info</span>
+            </a>
+       </li>
+    </ul>
+  </div><!-- #app -->
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
