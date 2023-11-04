@@ -151,7 +151,8 @@ h3, p {text-align:center;}
   padding:.5em;
 }
 
-  @media (max-width: 768px) {
+/* Media query for screens with a maximum width of 768px (typical mobile devices) */
+@media only screen and (max-width: 768px) {
   .grid ul {
     grid-template-columns: 1fr; /* Set to a single column for mobile devices */
     padding: 2rem 0.5rem; /* Adjust the padding as needed */
